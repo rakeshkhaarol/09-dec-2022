@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js arrey and object</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /*
+            css write in 3 ways
+            1. inside the tag
+            2. extranal linking
+            3. cloging the head teg
+        */
+
+        .color{
+            color:dodgerblue;
+        }
+    </style>
+    <script>
+        // there are three(3) ways write the js code
+        //1. cloging the head teg 
+        //2. cloging the body teg
+        //3. extranal 
+    
+
+
+        //1 way to create an array 
+        var $allnews = new Array(//arrey of object
+                                     
+                                    {//this is a object
+                                        n1h1:"Cong's Himachal drama: Pratibha Singh's supporters' show of strength in CM race",
+                                        publish:"Updated on Dec 09, 2022 05:40 PM IST",
+                                        n1p:`Himachal Pradesh Assembly election: The Congress returned to power in the hill state by capturing 40 of the 68 seats, with the outgoing Bharatiya Janata Party getting only 25.`
+                                    },
+                                    {
+                                        n2h1:'Supreme Court junks plea on regulating religious processions: ‘All not source of riots’',
+                                        publish1:"Updated on Dec 09, 2022 05:48 PM IST",
+                                        n2p:`The bench said the Supreme Court cannot be dragged into every area of law and order which is under the state.`
+
+                                    },
+                                    {
+                                        n3h1:'Cyclone Mandous: Tamil Nadu govt keeps guard up as storm advances',
+                                        publish2:"Published on Dec 09, 2022 06:20 PM IST",
+                                        n3p:`State Electricity Minister Senthil Balaji said 44,000 damaged electricity poles have been replaced and another two lakh poles are kept ready for emergency.`
+                                    }
+                                )
+                            
+    </script>
+
+    <script>
+        //there are 4 ways in see outpute
+        //first is a console.log
+
+        //you can create a expresseon
+        let n1ex = "n1p";
+        //arrey declear in arreyname[indexnamber]
+        console.log($allnews[0].n1h1)//first tecnik in define object 'objectName.propertyName'
+        console.log($allnews[0]['publish'])//secound tecnik in define object "objectName["propertyName"]"
+        console.log($allnews[0][n1ex])//first tecnik in define object "objectname[expresseon]"
+    </script>
+</head>
+<body>
+   
+    
+
+    <h1 class="h3"></h1>
+    <h4 data-h4="h4" class="color"></h4>
+    <h6 id="h6"></h6>
+
+    <hr>
+
+
+    <div id="news6"></div>
+    <div class="public color"  ></div>
+    <div id="detel"></div>
+
+    <script src="./js/script.js"> </script>
+    <script>
+        //2. way to create an array 
+        const _allnews1 =[//arrey of object
+            {
+                //1. proprty:velue
+                n4h:'Bulgaria\'s only nuclear power plant to shut down reactor after radioactive coolant leak',
+                publish4:"Published on Dec 09, 2022 06:00 PM IST",
+                n4p:`The leak at the Kozloduy Nuclear Power Plant was within safety limits when it was detected last week in a steam generator, its operator said on Friday, adding that it had decided to monitor the reactor at the time.`
+
+            },
+            {
+                n5h:'Madhya Pradesh an ideal place for investment, CM Chouhan tells US investors',
+                publish5:"Published on Dec 09, 2022 01:12 PM IST",
+                n5p:`The chief minister also invited them to attend the Global Investors Summit, which will take place in Indore on January 11 and 12.
+`
+            },
+            {
+                n6h:`India Women vs Australia Women Live Score 1st T20I: Mandhana, Jemimah continue IND charge after Shafali falls`,
+                publish6:'Updated on Dec 09, 2022 07:18 PM IST',
+                n6p:"India Women vs Australia Women Live Score 1st T20I: Jemimah Rodrigues and Smriti Mandhana have continued India's charge after Shafali Verma fell. Catch all Live score and updates of the 1st T20I match between India Women and Australia Women in Navi Mumbai."
+
+            },
+            {
+                n7h:"Book at centre of Indore law college row bought in 2014, says principal who quit",
+                publish7:'Updated on Dec 05, 2022 06:49 PM IST',
+                n7p:`Suresh Silawat, the Holkar Science College principal and brother of state minister Tulsi Silawat, said he has asked to be recused from the probe panel since his wife Sudha Silawat was associated with the college. She was the principal in 2014 when the college bought the controversial book`
+            }
+        ]
+    </script>
+    <script>
+        //there are 4 ways in see outpute
+        //1. console.log
+
+        //create expression
+        let n4ex = "n4p";//stetment
+
+
+        console.log(_allnews1[0].n4h)
+        console.log(_allnews1[0]['publish4'])
+        console.log(_allnews1[0][n4ex])
+
+
+        //2. document.write
+
+        //create expression
+        var n5ex = "n5p";//stetment
+
+
+        //arreyname[indexnamber] index namber always start in 0
+        document.write("<h1>"+_allnews1[1].n5h+'</h1>')
+        document.write("<h3>"+_allnews1[1]['publish5']+'</h3>')
+        document.write("<h5>"+_allnews1[1][n5ex]+'</h5>')
+
+
+
+        //3. innerHTML
+
+        
+        //create expression
+        var n6ex = "n6p";//stetment
+
+        document.querySelector("#news6").innerHTML=_allnews1[2].n6h;
+        document.querySelector(".public").innerHTML=_allnews1[2][`publish6`];
+        document.querySelector("#detel").innerHTML=_allnews1[2][n6ex];
+
+
+
+        //4. window.alert
+
+        //create expression
+        var n7ex = "n7p";//stetment
+
+        window.alert(_allnews1[3].n7h);
+        window.alert(_allnews1[3]["publish7"]);
+        window.alert(_allnews1[3][n7ex]);
+
+    </script>
+    <script>
+        //there are 4 ways in see outpute
+        //secound is a document.write
+
+        //create a expression
+        let n2ex =`n2p`
+
+        //arreyname[indexnamber]
+        document.write("<strong>"+$allnews[1].n2h1+"</strong>")
+        document.write("<h4>"+$allnews[1]["publish1"]+"</h4>")
+        document.write("<strong>"+$allnews[1][n2ex]+"</strong>")
+    </script>
+    <script>
+        //third way see in outpute 
+        //inner HTML
+        //create a expression
+         let n3ex =`publish2`
+
+        document.querySelector('.h3').innerHTML= $allnews[2].n3h1;
+        document.querySelector('#h6').innerHTML= $allnews[2]['n3p'];
+        document.querySelector('[data-h4]').innerHTML= $allnews[2][n3ex];
+    </script>
+    
+    
+</body>
+</html>
